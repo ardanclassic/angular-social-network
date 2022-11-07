@@ -12,7 +12,7 @@
           <div class="desc">
             <div *ngIf="i < 1" class="author">By {{ item.channelTitle }}</div>
             <div *ngIf="i > 0" class="author">{{ item.title }}</div>
-            <div class="views">{{ item.viewCount }} views</div>
+            <div class="views">{{ adjustNumbers(item.viewCount) }} views</div>
           </div>
         </div>
       </div>

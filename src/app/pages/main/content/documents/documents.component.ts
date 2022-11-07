@@ -18,7 +18,6 @@ export class DocumentsComponent implements OnInit {
   }
 
   getDocumentAPI() {
-    this.documents = mockrelated;
     this.documentService.getDocumentAPI().subscribe(
       (res: any) => {
         if (res.data.length > 5) {
@@ -34,5 +33,11 @@ export class DocumentsComponent implements OnInit {
         this.documents = mockrelated;
       }
     );
+  }
+
+  adjustNumbers(number: any) {
+    var parts = number.toString().split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return parts.join('.');
   }
 }

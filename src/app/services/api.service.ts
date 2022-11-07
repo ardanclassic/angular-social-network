@@ -6,7 +6,7 @@ const config: any = {
   url: 'https://yt-api.p.rapidapi.com',
   headers: {
     'X-RapidAPI-Key': environment.apiKey,
-    'X-RapidAPI-Host': 'yt-api.p.rapidapi.com'
+    'X-RapidAPI-Host': 'yt-api.p.rapidapi.com',
   },
 };
 
@@ -30,10 +30,12 @@ export class APIService {
   }
 
   getDocumentAPI() {
+    config.params = { id: '6gZwKexA3_Q' };
     return this.http.get(`${config.url}/related`, config);
   }
 
   getChannelsAPI() {
+    config.params = { id: 'PLMC9KNkIncKseYxDN2niH6glGRWKsLtde' };
     return this.http.get(`${config.url}/playlist`, config);
   }
 }
