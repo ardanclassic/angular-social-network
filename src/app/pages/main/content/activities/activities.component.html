@@ -6,13 +6,11 @@
   <section class="content">
     <ng-container *ngIf="getActivities.length > 0; else blankData">
       <div class="box-item" *ngFor="let item of getActivities">
-        <div class="img-box">
-          <img src="" alt="" />
-        </div>
+        <img [src]="item.authorProfileImageUrl[2]['url']" alt="img" />
         <div class="desc">
-          <div class="name">{{ item.author }}</div>
-          <div class="comment">{{ item.text }}</div>
-          <div class="time">{{ item.time }}</div>
+          <div class="name">{{ item.authorDisplayName }}</div>
+          <div class="comment">{{ item.textDisplay }}</div>
+          <div class="time">{{ item.publishedTimeText }}</div>
         </div>
         <div class="remove">+</div>
       </div>

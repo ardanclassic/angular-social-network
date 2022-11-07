@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
-const api_1: any = {
-  url: 'https://ytube-videos.p.api_1.com',
+const config: any = {
+  url: 'https://yt-api.p.rapidapi.com',
   headers: {
     'X-RapidAPI-Key': environment.apiKey,
-    'X-RapidAPI-Host': 'ytube-videos.p.rapidapi.com',
+    'X-RapidAPI-Host': 'yt-api.p.rapidapi.com'
   },
 };
 
@@ -15,13 +15,13 @@ export class APIService {
   constructor(private http: HttpClient) {}
 
   getVideos(params: any) {
-    api_1.params = params;
-    return this.http.get(`${api_1.url}/trending`, api_1);
+    config.params = params;
+    return this.http.get(`${config.url}/trending`, config);
   }
 
   getVideosComment(params: any) {
-    api_1.params = params;
-    return this.http.get(`${api_1.url}/comments`, api_1);
+    config.params = params;
+    return this.http.get(`${config.url}/comments`, config);
   }
 
   getPeoplesData() {
@@ -30,24 +30,10 @@ export class APIService {
   }
 
   getDocumentAPI() {
-    const config = {
-      params: { id: 'dQw4w9WgXcQ' },
-      headers: {
-        'X-RapidAPI-Key': environment.apiKey,
-        'X-RapidAPI-Host': 'yt-api.p.rapidapi.com',
-      },
-    };
-    return this.http.get(`https://yt-api.p.rapidapi.com/related`, config);
+    return this.http.get(`${config.url}/related`, config);
   }
 
   getChannelsAPI() {
-    const config = {
-      params: { id: 'PLMC9KNkIncKseYxDN2niH6glGRWKsLtde' },
-      headers: {
-        'X-RapidAPI-Key': environment.apiKey,
-        'X-RapidAPI-Host': 'yt-api.p.rapidapi.com',
-      },
-    };
-    return this.http.get(`https://yt-api.p.rapidapi.com/playlist`, config);
+    return this.http.get(`${config.url}/playlist`, config);
   }
 }

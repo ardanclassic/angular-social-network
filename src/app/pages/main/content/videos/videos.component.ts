@@ -21,14 +21,13 @@ export class VideosComponent implements OnInit {
     const param = { location: 'US' };
     this.videoService.getVideos(param).subscribe(
       (res: any) => {
-        if (res.length > 5) {
+        if (res.data.length > 5) {
           this.getvideos = [];
           for (let i = 0; i < 5; i++) {
-            const element = res[i];
+            const element = res.data[i];
             this.getvideos.push(element);
           }
         }
-        // console.log(this.getvideos);
       },
       (error) => {
         console.log('error: ', error);

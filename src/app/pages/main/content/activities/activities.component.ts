@@ -18,14 +18,13 @@ export class ActivitiesComponent implements OnInit {
   }
 
   getActivityAPI() {
-    const param = { id: 'YXXlSG-du7c' };
+    const param = { id: '6gZwKexA3_Q' };
     this.videoService.getVideosComment(param).subscribe(
       (res: any) => {
-        // console.log(res);
-        if (res.comments.length > 5) {
+        if (res.data.length > 5) {
           this.getActivities = [];
           for (let i = 0; i < 10; i++) {
-            const element = res.comments[i];
+            const element = res.data[i];
             this.getActivities.push(element);
           }
         }

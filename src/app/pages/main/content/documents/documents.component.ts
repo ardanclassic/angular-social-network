@@ -28,7 +28,6 @@ export class DocumentsComponent implements OnInit {
             this.documents.push(element);
           }
         }
-        // console.log(res);
       },
       (error) => {
         console.log('error: ', error);

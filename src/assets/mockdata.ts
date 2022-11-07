@@ -2,8 +2,10 @@ export const mockvideos = [
   {
     id: '216asfjlh',
     title: 'Become a Software Engineer',
-    author: 'Mark Feynn',
-    videoThumbnails: [
+    channelTitle: 'Mark Feynn',
+    thumbnail: [
+      {},
+      {},
       {
         url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
       },
@@ -13,8 +15,10 @@ export const mockvideos = [
   {
     id: '251729sh',
     title: 'Engineers Should Learn This!',
-    author: 'Bryan Glass',
-    videoThumbnails: [
+    channelTitle: 'Bryan Glass',
+    thumbnail: [
+      {},
+      {},
       {
         url: 'https://images.unsplash.com/photo-1581093806997-124204d9fa9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
       },
@@ -24,8 +28,10 @@ export const mockvideos = [
   {
     id: 'khsa9205',
     title: 'Web Developer Roadmap',
-    author: 'Louis Vuitton',
-    videoThumbnails: [
+    channelTitle: 'Louis Vuitton',
+    thumbnail: [
+      {},
+      {},
       {
         url: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
       },
@@ -35,8 +41,10 @@ export const mockvideos = [
   {
     id: 'geqge35',
     title: 'SEO Tips & Tricks',
-    author: 'Lyla Madwynn',
-    videoThumbnails: [
+    channelTitle: 'Lyla Madwynn',
+    thumbnail: [
+      {},
+      {},
       {
         url: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
       },
@@ -46,8 +54,10 @@ export const mockvideos = [
   {
     id: 'hehe23235',
     title: 'Optimize Your Website',
-    author: 'Patricia Johnson',
-    videoThumbnails: [
+    channelTitle: 'Patricia Johnson',
+    thumbnail: [
+      {},
+      {},
       {
         url: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
       },
@@ -59,39 +69,81 @@ export const mockvideos = [
 export const mockactivities = [
   {
     id: 'ied92714',
-    author: 'James Brown',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, velit.',
-    time: '16 minutes ago',
+    authorDisplayName: 'James Brown',
+    textDisplay: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, velit.',
+    publishedTimeText: '16 minutes ago',
+    authorProfileImageUrl: [
+      {},
+      {},
+      {
+        url: "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      }
+    ]
   },
   {
     id: '26hklsg2',
-    author: 'Ananta Burn',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, repellendus a numquam omnis rem voluptates hic!',
-    time: '52 minutes ago',
+    authorDisplayName: 'Ananta Burn',
+    textDisplay: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, repellendus a numquam omnis rem voluptates hic!',
+    publishedTimeText: '52 minutes ago',
+    authorProfileImageUrl: [
+      {},
+      {},
+      {
+        url: "https://images.unsplash.com/photo-1500048993953-d23a436266cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+      }
+    ]
   },
   {
     id: '53as9y10',
-    author: 'Meily Jeanne',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
-    time: '2 hours ago',
+    authorDisplayName: 'Meily Jeanne',
+    textDisplay: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+    publishedTimeText: '2 hours ago',
+    authorProfileImageUrl: [
+      {},
+      {},
+      {
+        url: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1044&q=80"
+      }
+    ]
   },
   {
     id: 'sav6892',
-    author: 'Riverr Dunn',
-    text: 'Lorem ipsum dolor sit amet, consectetur.',
-    time: '16 minutes ago',
+    authorDisplayName: 'Riverr Dunn',
+    textDisplay: 'Lorem ipsum dolor sit amet, consectetur.',
+    publishedTimeText: '16 minutes ago',
+    authorProfileImageUrl: [
+      {},
+      {},
+      {
+        url: "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1158&q=80"
+      }
+    ]
   },
   {
     id: 'aa727658',
-    author: 'Lily Macko',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, sapiente molestias?',
-    time: '16 minutes ago',
+    authorDisplayName: 'Lily Macko',
+    textDisplay: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, sapiente molestias?',
+    publishedTimeText: '16 minutes ago',
+    authorProfileImageUrl: [
+      {},
+      {},
+      {
+        url: "https://images.unsplash.com/photo-1664575196044-195f135295df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      }
+    ]
   },
   {
     id: 'gvdv97203',
-    author: 'Brinn Miles',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore beatae quod dicta ex maiores.',
-    time: '16 minutes ago',
+    authorDisplayName: 'Brinn Miles',
+    textDisplay: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore beatae quod dicta ex maiores.',
+    publishedTimeText: '16 minutes ago',
+    authorProfileImageUrl: [
+      {},
+      {},
+      {
+        url: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      }
+    ]
   },
 ];
 

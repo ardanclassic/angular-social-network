@@ -27,7 +27,6 @@ export class ChannelsComponent implements OnInit {
             this.channels.push(element);
           }
         }
-        // console.log(res);
       },
       (error) => {
         console.log('error: ', error);
