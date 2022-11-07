@@ -22,6 +22,7 @@ export class VideosComponent implements OnInit {
     this.videoService.getVideos(param).subscribe(
       (res: any) => {
         if (res.length > 5) {
+          this.getvideos = [];
           for (let i = 0; i < 5; i++) {
             const element = res[i];
             this.getvideos.push(element);

@@ -21,8 +21,9 @@ export class ActivitiesComponent implements OnInit {
     const param = { id: 'YXXlSG-du7c' };
     this.videoService.getVideosComment(param).subscribe(
       (res: any) => {
-        console.log(res);
+        // console.log(res);
         if (res.comments.length > 5) {
+          this.getActivities = [];
           for (let i = 0; i < 10; i++) {
             const element = res.comments[i];
             this.getActivities.push(element);

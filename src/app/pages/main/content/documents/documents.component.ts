@@ -14,7 +14,7 @@ export class DocumentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.documents = mockrelated;
-    // this.getDocumentAPI();
+    this.getDocumentAPI();
   }
 
   getDocumentAPI() {
@@ -22,12 +22,13 @@ export class DocumentsComponent implements OnInit {
     this.documentService.getDocumentAPI().subscribe(
       (res: any) => {
         if (res.data.length > 5) {
+          this.documents = [];
           for (let i = 0; i < 5; i++) {
             const element = res.data[i];
             this.documents.push(element);
           }
         }
-        console.log(res);
+        // console.log(res);
       },
       (error) => {
         console.log('error: ', error);

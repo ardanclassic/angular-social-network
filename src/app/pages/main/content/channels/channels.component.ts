@@ -14,19 +14,20 @@ export class ChannelsComponent implements OnInit {
 
   ngOnInit(): void {
     this.channels = mockchannels;
-    // this.getChannelAPI();
+    this.getChannelAPI();
   }
 
   getChannelAPI() {
     this.channelService.getChannelsAPI().subscribe(
       (res: any) => {
         if (res.data.length > 15) {
+          this.channels = [];
           for (let i = 0; i < 15; i++) {
             const element = res.data[i];
             this.channels.push(element);
           }
         }
-        console.log(res);
+        // console.log(res);
       },
       (error) => {
         console.log('error: ', error);

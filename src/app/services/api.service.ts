@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 const api_1: any = {
   url: 'https://ytube-videos.p.api_1.com',
   headers: {
-    'X-RapidAPI-Key': 'c24a24b726mshabd70592832fdd4p12d2bdjsn1525fccffad0',
+    'X-RapidAPI-Key': environment.apiKey,
     'X-RapidAPI-Host': 'ytube-videos.p.rapidapi.com',
   },
 };
@@ -32,7 +33,7 @@ export class APIService {
     const config = {
       params: { id: 'dQw4w9WgXcQ' },
       headers: {
-        'X-RapidAPI-Key': 'c24a24b726mshabd70592832fdd4p12d2bdjsn1525fccffad0',
+        'X-RapidAPI-Key': environment.apiKey,
         'X-RapidAPI-Host': 'yt-api.p.rapidapi.com',
       },
     };
@@ -43,7 +44,7 @@ export class APIService {
     const config = {
       params: { id: 'PLMC9KNkIncKseYxDN2niH6glGRWKsLtde' },
       headers: {
-        'X-RapidAPI-Key': 'c24a24b726mshabd70592832fdd4p12d2bdjsn1525fccffad0',
+        'X-RapidAPI-Key': environment.apiKey,
         'X-RapidAPI-Host': 'yt-api.p.rapidapi.com',
       },
     };
