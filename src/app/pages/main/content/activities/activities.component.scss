@@ -1,0 +1,100 @@
+.activities-container {
+  margin-bottom: 48px;
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 12px;
+    .title {
+      flex-grow: 1;
+      font-size: 24px;
+    }
+    .browse {
+      flex-grow: 4;
+      text-align: center;
+    }
+  }
+  .content {
+    overflow-y: auto;
+    height: calc((100vw / 3.35));
+    padding-right: 8px;
+    // background-color: #000;
+    .box-item {
+      position: relative;
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      transition: 0.1s all ease-in-out;
+      overflow: hidden;
+      cursor: pointer;
+      &:hover {
+        padding: 8px;
+        border: 1px solid #fff;
+        // background-color: #000;
+        .remove {
+          display: block;
+          display: flex;
+        }
+      }
+      .remove {
+        display: none;
+        position: absolute;
+        right: -18px;
+        top: -12px;
+        background-color: white;
+        color: indianred;
+        width: 48px;
+        height: 32px;
+        line-height: normal;
+        align-items: end;
+        justify-content: center;
+        transform: rotate(45deg);
+        font-size: 20px;
+      }
+      .img-box {
+        background-color: #fff;
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .desc {
+        width: 80%;
+        .name {
+          font-weight: 600;
+          span {
+            font-weight: 200;
+          }
+        }
+        .comment {
+        }
+        .time {
+          margin-top: 4px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .activities-container {
+    .content {
+      height: 100vw;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .activities-container {
+    .content {
+      height: 500px;
+    }
+  }
+}

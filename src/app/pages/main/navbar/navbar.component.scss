@@ -1,0 +1,122 @@
+.navbar-component {
+  padding: 8px 0;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  .logo {
+    width: 20%;
+    font-size: 32px;
+    margin-bottom: 0;
+    margin-right: 24px;
+    span:first-child {
+      font-weight: 500;
+    }
+    span:last-child {
+      font-weight: 200;
+    }
+  }
+  .search-field {
+    width: 100%;
+    position: relative;
+    input.search {
+      width: -webkit-fill-available;
+      background-color: #fff;
+      color: indianred;
+      padding: 12px;
+      padding-right: 36px;
+      border-radius: 8px;
+      outline: none;
+      border: none;
+    }
+    i {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      cursor: pointer;
+    }
+  }
+  .upload {
+    // width: 10%;
+    padding: 8px 16px;
+    background-color: #fff;
+    border: none;
+    color: indianred;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  .user {
+    // width: 10%;
+    position: relative;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    .profpic {
+      display: flex;
+      width: 42px;
+      height: 42px;
+      background-color: #fff;
+      color: indianred;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+    }
+    .name {
+      font-weight: 600;
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      h3,
+      h4 {
+        margin: 0;
+        line-height: normal;
+      }
+    }
+    .badge {
+      position: absolute;
+      right: -24px;
+      top: -6px;
+      z-index: 2;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      color: indianred;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-weight: 600;
+      font-size: 12px;
+    }
+  }
+  .menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .navbar-component {
+    .search-field {
+      display: none;
+    }
+    .upload {
+      display: none;
+    }
+    .user {
+      display: none;
+    }
+    .menu {
+      display: flex;
+      i {
+        font-size: 36px;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.breadcrumb-wrapper {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin: 24px auto;
+  .breadcrumb {
+    list-style: none;
+    color: #fff;
+    padding: 0;
+    li {
+      display: inline;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      &:not(:first-child)::before {
+        padding: 8px;
+        content: "/\00a0";
+        font-weight: 300;
+      }
+      a {
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .breadcrumb-wrapper {
+    .breadcrumb {
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-bottom: 8px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<section class="activities-container">
+  <section class="header">
+    <div class="title">Comments</div>
+    <div class="browse">View all comments</div>
+  </section>
+  <section class="content">
+    <ng-container *ngIf="getActivities.length > 0; else blankData">
+      <div class="box-item" *ngFor="let item of getActivities">
+        <div class="img-box">
+          <img src="" alt="" />
+        </div>
+        <div class="desc">
+          <div class="name">{{ item.author }}</div>
+          <div class="comment">{{ item.text }}</div>
+          <div class="time">{{ item.time }}</div>
+        </div>
+        <div class="remove">+</div>
+      </div>
+    </ng-container>
+
+    <ng-template #blankData>
+      <div class="box-item" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+        <div class="img-box">
+          <img src="" alt="" />
+        </div>
+        <div class="desc">
+          <div class="name">Mark Anthony</div>
+          <div class="comment">
+            This is really amazing! Maybe You want to see it again with another
+            references like this!
+          </div>
+          <div class="time">28 minutes ago</div>
+        </div>
+        <div class="remove">+</div>
+      </div>
+    </ng-template>
+  </section>
+</section>

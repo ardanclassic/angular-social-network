@@ -1,0 +1,42 @@
+<section class="document-container">
+  <section class="header">
+    <div class="title">Documents</div>
+    <div class="browse">Browse All Documents</div>
+  </section>
+  <section class="content">
+    <ng-container *ngIf="documents.length > 0; else blankdata">
+      <div *ngFor="let item of documents; let i = index" class="item-box">
+        <img [src]="item.thumbnail[1]['url']" alt="img" />
+        <div class="text">
+          <div class="title">{{ item.title }}</div>
+          <div class="desc">
+            <div *ngIf="i < 1" class="author">By {{ item.channelTitle }}</div>
+            <div *ngIf="i > 0" class="author">{{ item.title }}</div>
+            <div class="views">{{ item.viewCount }} views</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item-box more">
+        <div class="title">
+          <i class="material-icons">add</i>
+          <span>Share <br />Your Document</span>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #blankdata>
+      <div class="item-box box-1"></div>
+      <div class="item-box"></div>
+      <div class="item-box"></div>
+      <div class="item-box"></div>
+      <div class="item-box"></div>
+      <div class="item-box more">
+        <div class="title">
+          <i class="material-icons">add</i>
+          <span>Share <br />Your Document</span>
+        </div>
+      </div>
+    </ng-template>
+  </section>
+</section>

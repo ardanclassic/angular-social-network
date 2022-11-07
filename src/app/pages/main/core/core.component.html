@@ -1,0 +1,30 @@
+<mat-drawer-container class="container-wrapper" autosize>
+  <mat-drawer
+    #drawer
+    class="example-sidenav"
+    mode="over"
+    [opened]="currentToggle"
+  >
+    <div class="user">
+      <i class="material-icons">person</i>
+      <div class="name">Waseem Arshad</div>
+      <!-- <div class="badge">23</div> -->
+    </div>
+    <div class="search-field">
+      <input type="text" placeholder="Find . . ." class="search" />
+      <i class="material-icons">search</i>
+    </div>
+    <button class="upload">
+      <i class="material-icons">file_upload</i>
+      Upload
+    </button>
+    <div (click)="setmenu(!currentToggle)" class="close">&#10006;</div>
+  </mat-drawer>
+
+  <div class="container">
+    <app-navbar (toggleStatus)="setmenu(!currentToggle)"></app-navbar>
+    <app-breadcrumb></app-breadcrumb>
+    <app-content></app-content>
+    <app-footer></app-footer>
+  </div>
+</mat-drawer-container>

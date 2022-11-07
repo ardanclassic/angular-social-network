@@ -1,0 +1,36 @@
+<section class="people-container">
+  <section class="header">
+    <div class="title">People</div>
+    <div class="browse">View All</div>
+  </section>
+  <section class="content">
+    <ng-container *ngIf="peoples.length > 0; else blankVideos">
+      <div *ngFor="let item of peoples" class="item-box">
+        <img [src]="item.pic" alt="img" />
+        <div class="text">
+          <div class="title">{{ item.name }}</div>
+          <div class="desc">
+            <div class="author">{{ item.company.catchPhrase }}</div>
+            <div class="views">{{ item.website }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item-box more">
+        <div class="title">
+          <i class="material-icons">album</i>
+          <span>Show <br />Your Work</span>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #blankVideos>
+      <div class="item-box box-1"></div>
+      <div class="item-box"></div>
+      <div class="item-box"></div>
+      <div class="item-box"></div>
+      <div class="item-box"></div>
+      <div class="item-box"></div>
+    </ng-template>
+  </section>
+</section>

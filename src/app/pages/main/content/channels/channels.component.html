@@ -1,0 +1,33 @@
+<section class="channel-container">
+  <section class="header">
+    <div class="title">Channel</div>
+    <div class="browse">Browse all channels</div>
+  </section>
+  <section class="content">
+    <ng-container *ngIf="channels.length > 0; else blankdata">
+      <div class="box-item" *ngFor="let item of channels">
+        <img [src]="item.thumbnail[0]['url']" alt="img" />
+        <div class="title">{{ item.videoOwnerChannelTitle }}</div>
+        <div class="remove">+</div>
+      </div>
+    </ng-container>
+
+    <ng-template #blankdata>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+      <div class="box-item blank"></div>
+    </ng-template>
+  </section>
+</section>

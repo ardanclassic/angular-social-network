@@ -1,0 +1,37 @@
+<section class="videos-container">
+  <section class="header">
+    <div class="title">Videos</div>
+    <div class="browse">Browse all videos</div>
+  </section>
+  <section class="content">
+    <ng-container *ngIf="getvideos.length > 0; else blankVideos">
+      <div *ngFor="let item of getvideos; let i = index" class="item-box">
+        <img [src]="item.videoThumbnails[0]['url']" alt="img" />
+        <div class="text">
+          <div class="title">{{ item.title }}</div>
+          <div class="desc">
+            <div *ngIf="i < 1" class="author">By {{ item.author }}</div>
+            <div *ngIf="i > 0" class="author">{{ item.title }}</div>
+            <div class="views">{{ item.viewCount }} views</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item-box more">
+        <div class="title">
+          <i class="material-icons">file_upload</i>
+          <span>Upload <br> Your Own Video</span>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #blankVideos>
+      <div class="item-box box-1"></div>
+      <div class="item-box"></div>
+      <div class="item-box"></div>
+      <div class="item-box"></div>
+      <div class="item-box"></div>
+      <div class="item-box"></div>
+    </ng-template>
+  </section>
+</section>

@@ -1,0 +1,89 @@
+.container-wrapper {
+  background-color: indianred;
+  color: #fff;
+  padding: 5% 0;
+  .container {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .mat-drawer {
+    width: 100%;
+    padding: 24px 16px;
+    background-color: rgb(205 92 92 / 80%);
+    color: #fff;
+    .user {
+      text-align: center;
+      margin-bottom: 24px;
+      i {
+        font-size: 125px;
+        border-radius: 50%;
+        color: indianred;
+        background-color: #fff;
+        padding: 24px;
+        margin: 16px auto;
+      }
+      .name {
+        font-size: 24px;
+      }
+    }
+    .search-field {
+      width: 100%;
+      position: relative;
+      margin-bottom: 12px;
+      input.search {
+        width: -webkit-fill-available;
+        background-color: #fff;
+        color: indianred;
+        padding: 14px 12px;
+        padding-right: 36px;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+      }
+      i {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        color: indianred;
+        cursor: pointer;
+      }
+    }
+    .upload {
+      width: 100%;
+      padding: 8px 16px;
+      background-color: darkred;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      font-weight: 600;
+    }
+    .close {
+      position: absolute;
+      right: 16px;
+      top: 24px;
+      font-size: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container-wrapper {
+    .container {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-wrapper {
+    .container {
+      width: 95%;
+    }
+  }
+}
